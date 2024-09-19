@@ -266,4 +266,142 @@ console.log('Exercise 5 my result: ', firstLast)
 //   ]
 // )
   
-  
+console.log('______Exercise 6_____Array.prototype.some()_____________');
+
+/*
+Exercise 6: Array.prototype.some()
+
+Determine if there is at least one person in the devs array who is 18 years 
+old or older.
+
+- You have an array of people with their respective ages.
+- Use the Array.prototype.some() method to check if any person in the array is 
+  18 years old or older.
+- Store the result (true or false) in the variable 'isAdultPresent'. 
+*/
+
+let isAdultPresent = null
+
+// Complete the exercise in the space below:
+
+isAdultPresent = devs.some((x) => {
+   return 2024 - x.year >= 18;
+});
+
+// Check your work:
+console.log('Exercise 6 my result: ', isAdultPresent)
+// console.log('Exercise 6 correct result: ', true)
+
+console.log('______Exercise 7_____Array.prototype.every()_____________');
+
+/*
+Exercise 7: Array.prototype.every()
+
+Use Array.prototype.every() to determine if every person in the devs array is 
+19 years old or older.
+
+- You have an array of individuals, each with their year of birth represented
+  by the 'year' property.
+- Use the Array.prototype.every() method to verify if every individual in the
+  array is at least 19 years old.
+- Store the result (true or false) in the variable 'isEveryone19OrOlder'.
+*/
+
+let isEveryone19OrOlder = null
+
+// Complete the exercise in the space below:
+
+isEveryone19OrOlder = devs.every((x) => {
+    return 2024 - x.year >= 19;
+})
+
+// Check your work:
+console.log('Exercise 7 my result: ', isEveryone19OrOlder)
+// console.log('Exercise 7 correct result: ', false)
+
+console.log('______Exercise 8_____Array.prototype.find()_____________');
+
+/*
+Exercise 8: Array.prototype.find()
+
+Use Array.prototype.find() to identify and retrieve the comment object with 
+a specific ID 823423 from an array of comment objects.
+
+- Assign the found comment object to the variable 'commentById'.
+*/
+
+let commentById = {}
+
+// Complete the exercise in the space below:
+
+commentById = comments.find((x) => {
+    return x.id === 823423;
+})
+
+
+// Check your work:
+console.log('Exercise 8 my result: ', commentById)
+// console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 })
+
+console.log('______Exercise 9_____Array.prototype.findIndex()_____________');
+
+/*
+Exercise 9: Array.prototype.findIndex()
+
+Determine the index of the comment that has a specific ID 123523 in an array 
+of comment objects.
+
+- Store the index in the variable 'idx'.
+*/
+
+let idx = null
+
+// Complete the exercise in the space below:
+
+idx = comments.findIndex((x) => {
+  return x.id === 123523
+})
+
+// Check your work:
+console.log('Exercise 9 my result: ', idx)
+// console.log('Exercise 9 correct result: ', 3)
+
+console.log('______Exercise 10_____Array.prototype.reduce()_____________');
+
+/*
+Level Up exercise 1: Array.prototype.reduce()
+
+Calculate the combined lifespan of all the inventors using 
+Array.prototype.reduce()
+
+- Each object in the array includes these properties: 
+  'first', 'last', 'year' (birth year), and 'passed' (year of death).
+- Use the Array.prototype.reduce() method to calculate the sum of the total 
+  years lived by all the inventors.
+- Store the total sum in the variable 'totalYearsLived'.
+
+Hints:
+
+- Inside the reduce callback function, calculate the lifespan of each inventor 
+  (passed - year).
+- Accumulate this lifespan in the 'totalYearsLived' variable.
+- Remember, reduce takes a callback function and an initial value for the 
+  accumulator.
+*/
+
+let totalYearsLived = 0
+
+// Complete the exercise in the space below:
+
+totalYearsLived = inventors.reduce((acc, x) => {
+  return  acc +(x.passed - x.year); 
+},0);
+
+// Check your work:
+console.log('Level Up 1 my result: ', totalYearsLived)
+// console.log('Level Up 1 correct result: ', 861)
+
+
+
+
+
