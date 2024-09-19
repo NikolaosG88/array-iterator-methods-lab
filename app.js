@@ -212,6 +212,10 @@ let firstLast = []
 
 // Complete the exercise in the space below:
 
+firstLast = people.map((nameChange) => {
+ let [lastName, firstName] = nameChange.split(', ');
+  return `${firstName} ${lastName}`;
+});
 
 
 // Check your work:
